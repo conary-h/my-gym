@@ -15,8 +15,12 @@ export default function CategoryDetail(props) {
     category.exercises.map(item => <ExerciseItem key={item.id} data={item} />);
   return (
     <>
-      <h1>{category.muscle}</h1>
-      {category.exercises ? getExerciseItemList() : ''}
+      <div className="header">
+        <h1>{category.muscle}</h1>
+      </div>
+      <div className="content">
+        {category.exercises ? getExerciseItemList() : ''}
+      </div>
     </>
   );
 }

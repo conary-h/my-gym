@@ -4,7 +4,7 @@ export default function ExerciseItem(props) {
   const { name, description } = props.data;
 
   return (
-    <div>
+    <div className="card">
       <strong>{`Exercise: ${name}`}</strong>
       <p>{description}</p>
     </div>
