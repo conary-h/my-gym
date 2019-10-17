@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import data from '../data';
-import ExerciseItem from '../components/ExerciseItem';
+import ExerciseItem from './ExerciseItem';
 
 export default function CategoryDetail(props) {
   const [category, setCategory] = useState({});
@@ -14,9 +14,13 @@ export default function CategoryDetail(props) {
   const getExerciseItemList = () =>
     category.exercises.map(item => <ExerciseItem key={item.id} data={item} />);
   return (
-    <div>
-      <h1>{category.muscle}</h1>
-      {category.exercises ? getExerciseItemList() : ''}
-    </div>
+    <>
+      <div className="header">
+        <h1>Muscle: {category.muscle}</h1>
+      </div>
+      <div className="content">
+        {category.exercises ? getExerciseItemList() : ''}
+      </div>
+    </>
   );
 }

@@ -1,16 +1,21 @@
 import React from 'react';
 import { Router } from '@reach/router';
-import Home from './containers/Home';
-import CategoryDetail from './containers/CategoryDetail';
+import Dashboard from './containers/Dashboard';
+import CategoryDetail from './components/CategoryDetail';
 
-import './App.css';
+import './styles/main.scss';
+import CategoryList from './components/CategoryList';
 
 function App() {
   return (
-    <Router>
-      <Home path="/" />
-      <CategoryDetail path="category/:categoryId" />
-    </Router>
+    <div className="container">
+      <Dashboard>
+        <Router>
+          <CategoryList path="/" />
+          <CategoryDetail path="category/:categoryId" />
+        </Router>
+      </Dashboard>
+    </div>
   );
 }
 

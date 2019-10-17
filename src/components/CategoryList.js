@@ -9,9 +9,11 @@ export default function CategoryList() {
     ));
 
   return (
-    <div>
-      <h1>Category List</h1>
-      {renderCategoryCards()}
-    </div>
+    <>
+      <div className="header">
+        <h1>Category List</h1>
+      </div>
+      <div className="content">{renderCategoryCards()}</div>
+    </>
   );
 }
