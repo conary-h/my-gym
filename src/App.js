@@ -4,6 +4,7 @@ import Dashboard from './containers/Dashboard';
 import CategoryDetail from './components/CategoryDetail';
 
 import './styles/main.scss';
+import 'flexboxgrid/css/flexboxgrid.min.css';
 import CategoryList from './components/CategoryList';
 import ExerciseDetail from './components/ExerciseDetail';
 

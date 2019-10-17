@@ -1,0 +1,24 @@
+.exercise-detail {
+  color: #000;
+  .card {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    &:hover {
+      background-color: unset;
+      color: #000;
+    }
+  }
+  .rest-circle {
+    width: 4rem;
+    height: 4rem;
+    margin-right: 2rem;
+    display: inline-block;
+    background: #fff;
+    border-radius: 50%;
+    border: 1px solid #000;
+  }
+  .unit-input {
+    width: 5rem;
+  }
+}
