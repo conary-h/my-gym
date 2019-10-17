@@ -16,7 +16,7 @@ export default function CategoryDetail(props) {
   return (
     <>
       <div className="header">
-        <h1>{category.muscle}</h1>
+        <h1>Muscle: {category.muscle}</h1>
       </div>
       <div className="content">
         {category.exercises ? getExerciseItemList() : ''}
