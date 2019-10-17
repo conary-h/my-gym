@@ -5,6 +5,7 @@ import CategoryDetail from './components/CategoryDetail';
 
 import './styles/main.scss';
 import CategoryList from './components/CategoryList';
+import ExerciseDetail from './components/ExerciseDetail';
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
       <Dashboard>
         <Router>
           <CategoryList path="/" />
-          <CategoryDetail path="category/:categoryId" />
+          <CategoryDetail path="categories/:categoryId" />
+          <ExerciseDetail path="categories/:categoryId/exercises/:exerciseId" />
         </Router>
       </Dashboard>
     </div>

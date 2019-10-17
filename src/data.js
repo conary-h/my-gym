@@ -4,7 +4,7 @@ export default [
     muscle: 'Chest',
     image: '',
     exercises: [
-      { id: 13, name: 'Barbell Bench Press', description: 'lorem50' },
+      { id: 13, name: 'Barbell Bench Press', description: 'lorem640' },
       { id: 23, name: 'Flat Bench Dumbbell Press', description: 'lorem50' },
       {
         id: 33,

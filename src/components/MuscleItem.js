@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from '@reach/router';
 
-export default function MuscleItem(props) {
+export default function MuscleItem({ muscleData: { id, muscle } }) {
   return (
-    <Link to={`category/${props.muscleData.id}`}>
+    <Link to={`categories/${id}`}>
       <div className="card">
-        <strong>{props.muscleData.muscle}</strong>
+        <strong>{muscle}</strong>
       </div>
     </Link>
   );

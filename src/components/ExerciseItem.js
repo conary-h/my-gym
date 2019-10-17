@@ -1,12 +1,13 @@
 import React from 'react';
+import { Link } from '@reach/router';
 
-export default function ExerciseItem(props) {
-  const { name, description } = props.data;
-
+export default function ExerciseItem({ data: { id, name, description } }) {
   return (
-    <div className="card">
-      <strong>{`Exercise: ${name}`}</strong>
-      <p>{description}</p>
-    </div>
+    <Link to={`exercises/${id}`}>
+      <div className="card">
+        <strong>{`Exercise: ${name}`}</strong>
+        <p>{description}</p>
+      </div>
+    </Link>
   );
 }
