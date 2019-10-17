@@ -1,0 +1,52 @@
+@import 'theme';
+@import 'card';
+@import 'dashboard';
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: $font-stack;
+  background-color: $primary-color;
+}
+
+.container {
+  box-sizing: border-box;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+
+  @media (min-width: 1200px) {
+    width: 1164px;
+  }
+  @media (min-width: 1024px) {
+    width: 970px;
+  }
+  @media (min-width: 768px) {
+    width: 744px;
+  }
+}
+
+.header {
+  background-color: $secondary-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+
+  h1 {
+    margin: 0;
+    color: #fff;
+    font: 400 2.4rem $font-stack;
+  }
+}
+
+.content {
+  background: #fff;
+
+  @media (min-width: 768px) {
+    font-size: 2rem;
+  }
+}

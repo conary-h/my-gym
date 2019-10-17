@@ -1,7 +1,7 @@
 export default [
   {
     id: 1,
-    muscle: 'chest',
+    muscle: 'Chest',
     image: '',
     exercises: [
       { id: 1, name: 'Barbell Bench Press', description: 'lorem50' },
@@ -11,7 +11,7 @@ export default [
   },
   {
     id: 2,
-    muscle: 'legs',
+    muscle: 'Legs',
     image: '',
     exercises: [
       { id: 1, name: 'Barbell Squat', description: 'lorem10' },
@@ -22,7 +22,7 @@ export default [
   },
   {
     id: 3,
-    muscle: 'biceps',
+    muscle: 'Biceps',
     image: '',
     exercises: [
       { id: 2, name: 'Alternate bicep curl', description: 'lorem65' },

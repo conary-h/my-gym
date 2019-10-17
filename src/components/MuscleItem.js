@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
 export default function MuscleItem(props) {
   return (
-    <div className="muscle-card">
+    <div className="card">
       <strong>{props.muscleData.muscle}</strong>
     </div>
   );

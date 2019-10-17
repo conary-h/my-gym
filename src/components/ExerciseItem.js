@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function ExerciseItem(props) {
-  const { id, name, description } = props.data;
+  const { name, description } = props.data;
 
   return (
     <div>
