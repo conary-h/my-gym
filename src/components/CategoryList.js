@@ -1,6 +1,8 @@
 import React from 'react';
 import data from '../data';
 import MuscleItem from './MuscleItem';
+import Header from './Header';
+import CategoryListBackground from '../images/categoryListBackground.png';
 
 export default function CategoryList() {
   const renderCategoryCards = () =>
@@ -10,9 +12,7 @@ export default function CategoryList() {
 
   return (
     <>
-      <div className="header">
-        <h1>Category List</h1>
-      </div>
+      <Header title="Category List" image={CategoryListBackground} />
       <div className="content">{renderCategoryCards()}</div>
     </>
   );

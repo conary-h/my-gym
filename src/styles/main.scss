@@ -8,15 +8,13 @@ html {
 
 body {
   font-family: $font-stack;
-  background-color: $primary-color;
+  background-color: #f5f8fb;
 }
 
 .container {
   box-sizing: border-box;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
 
   @media (min-width: 1200px) {
     width: 1164px;
@@ -30,29 +28,38 @@ body {
 }
 
 .header {
-  background-color: $secondary-color;
+  background-color: #126ab6;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  padding: 1rem;
+  min-height: 10rem;
+  position: relative;
+
+  margin-top: 1rem;
+  border-radius: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 
   h1 {
     margin: 0;
     color: #fff;
-    margin-bottom: 0.5rem;
     font: 400 2.4rem $font-stack;
+    position: absolute;
   }
   p {
     margin: 0;
     color: #fff;
     font: italic 2rem $font-stack;
   }
+
+  img {
+    max-width: 100%;
+    filter: brightness(50%);
+    border-radius: inherit;
+  }
 }
 
 .content {
-  background: #fff;
-
   a {
     text-decoration: none;
     color: inherit;
