@@ -1,14 +1,16 @@
 import React, { useEffect } from 'react';
-import { fetchCategoriesAction } from '../actions/categoryActions';
+import { fetchCategories } from '../actions/categoryActions';
+import { useDispatch } from 'react-redux';
 
-export default function Dashboard(props) {
+export default function Dashboard({ children }) {
+  const dispatch = useDispatch();
   useEffect(() => {
-    fetchCategoriesAction();
+    dispatch(fetchCategories());
   });
 
   return (
     <div id="dashboard" className="">
-      {props.children}
+      {children}
     </div>
   );
 }

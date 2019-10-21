@@ -5,8 +5,9 @@ const defaultState = [];
 
 const categoriesReducer = handleActions(
   {
-    [FECTH_CATEGORIES]: (state, payload) => {
-      return { ...state, categories: payload };
+    [FECTH_CATEGORIES]: (state, { payload }) => {
+      const categories = payload;
+      return [...state, ...categories];
     }
   },
   defaultState
