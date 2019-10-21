@@ -6,9 +6,8 @@ import { useSelector } from 'react-redux';
 
 export default function CategoryList() {
   const categories = useSelector(state => state.categories);
-  debugger;
 
-  const renderCategoryCards = () =>
+  const generateCategoryCards = () =>
     categories.map(category => (
       <MuscleItem key={category.id} muscleData={category} />
     ));
@@ -16,7 +15,7 @@ export default function CategoryList() {
   return (
     <>
       <Header title="Category List" image={CategoryListBackground} />
-      <div className="content">{renderCategoryCards()}</div>
+      <div className="content">{generateCategoryCards()}</div>
     </>
   );
 }
