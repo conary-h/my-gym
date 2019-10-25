@@ -2,7 +2,7 @@ import React from 'react';
 import { Router } from '@reach/router';
 import Dashboard from './containers/Dashboard';
 import CategoryDetail from './components/CategoryDetail';
-import CategoryList from './components/CategoryList';
+import WorkoutList from './components/WorkoutList';
 import ExerciseDetail from './components/ExerciseDetail';
 
 import './styles/main.scss';
@@ -13,7 +13,7 @@ function App() {
     <div className="container">
       <Dashboard>
         <Router>
-          <CategoryList path="/" />
+          <WorkoutList path="/" />
           <CategoryDetail path="categories/:categoryId" />
           <ExerciseDetail path="categories/:categoryId/exercises/:exerciseId" />
         </Router>
