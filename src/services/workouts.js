@@ -1,3 +1,3 @@
 export const getWorkouts = () => [
-  { id: null, name: '', day: '', exerciseIdList: [] }
+  { id: '01', name: 'Great Chest', day: 'Monday', exerciseIdList: ['13', '23'] }
 ];

@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import data from '../data';
-import ExerciseItem from './ExerciseItem';
-import Header from './Header';
+import ExerciseItem from '../components/ExerciseItem';
+import Header from '../components/Header';
 
-export default function CategoryDetail({ categoryId }) {
+export default function WorkoutDetail({ workoutId }) {
   const [category, setCategory] = useState({});
 
   useEffect(() => {
     const currentCategory = data.find(
-      category => parseInt(categoryId) === category.id
+      category => parseInt(workoutId) === category.id
     );
     setCategory(currentCategory);
-  }, [categoryId]);
+  }, [workoutId]);
   const getExerciseItemList = () =>
     category.exercises.map(item => <ExerciseItem key={item.id} data={item} />);
   return (

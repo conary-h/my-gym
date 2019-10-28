@@ -1,8 +1,8 @@
 import React from 'react';
 import { Router } from '@reach/router';
 import Dashboard from './containers/Dashboard';
-import CategoryDetail from './components/CategoryDetail';
-import WorkoutList from './components/WorkoutList';
+import WorkoutDetail from './containers/WorkoutDetail';
+import Workout from './containers/Workout';
 import ExerciseDetail from './components/ExerciseDetail';
 
 import './styles/main.scss';
@@ -13,8 +13,8 @@ function App() {
     <div className="container">
       <Dashboard>
         <Router>
-          <WorkoutList path="/" />
-          <CategoryDetail path="categories/:categoryId" />
+          <Workout path="/" />
+          <WorkoutDetail path="workouts/:workoutId" />
           <ExerciseDetail path="categories/:categoryId/exercises/:exerciseId" />
         </Router>
       </Dashboard>
