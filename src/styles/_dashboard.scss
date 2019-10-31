@@ -1,1 +1,22 @@
 @import './exercise-detail';
+
+.workout-card {
+  &.Monday {
+    background: #235789;
+  }
+  &.Tuesday {
+    background: #1d84b5;
+  }
+  &.Friday {
+    background: #85cb33;
+  }
+  &.Saturday {
+    background: #eca400;
+  }
+  .workout-day {
+    font-size: 1rem;
+  }
+  .workout-name {
+    font-size: 1.3rem;
+  }
+}

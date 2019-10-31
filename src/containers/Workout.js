@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchWorkouts } from '../actions/workoutActions';
+import WorkoutItem from '../components/WorkoutItem';
 
 export default function Workout() {
   const dispatch = useDispatch();
@@ -10,11 +11,25 @@ export default function Workout() {
   }, [dispatch]);
 
   const generateWorkoutItems = () =>
-    workouts.map(({ id, name }) => <li key={id}>{name}</li>);
+    workouts.map(workout => (
+      <WorkoutItem key={workout.id} workoutData={workout} />
+    ));
 
   return (
     <div id="WorkoutList">
-      <h1>WorkoutList</h1>
+      <div className="intro">
+        <h1>Good day UserName</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. ris
+          voluptatum necessitatibus natus.
+        </p>
+      </div>
+
+      <div className="future-component-plans">
+        <h2>Plans</h2>
+        <strong>My November Plan</strong>
+      </div>
+
       <ul>{generateWorkoutItems()}</ul>
     </div>
   );

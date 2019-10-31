@@ -15,6 +15,8 @@ body {
   box-sizing: border-box;
   margin-right: auto;
   margin-left: auto;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
 
   @media (min-width: 1200px) {
     width: 1164px;
@@ -52,6 +54,9 @@ body {
     filter: brightness(50%);
     border-radius: inherit;
   }
+}
+ul {
+  padding: 0;
 }
 
 .content {
