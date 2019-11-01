@@ -1,0 +1,40 @@
+.container {
+  box-sizing: border-box;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+
+  @media (min-width: 1200px) {
+    width: 1164px;
+  }
+  @media (min-width: 1024px) {
+    width: 970px;
+  }
+  @media (min-width: 768px) {
+    width: 744px;
+  }
+}
+
+.content {
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+.margin-auto {
+  margin: 0 auto;
+}
+
+.display-block {
+  display: block;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}

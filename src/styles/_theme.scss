@@ -3,3 +3,18 @@ $secondary-color: #173753;
 $tertiary-color: #6daedb;
 
 $font-stack: 'Roboto', sans-serif;
+
+/*==== Breakpoints ====*/
+$breakpoints: (
+  xsmall: 320px,
+  small: 375px,
+  medium: 425px,
+  large: 768px,
+  // tablet
+    xlarge: 1024px,
+  xxl: 1400px,
+  2k: 2048px,
+  xs-max: 767px,
+  md-min: 1024px,
+  lg-min: 1200px
+);

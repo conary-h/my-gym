@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from '@reach/router';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchWorkouts } from '../actions/workoutActions';
 import WorkoutItem from '../components/WorkoutItem';
@@ -28,9 +29,13 @@ export default function Workout() {
       <div className="future-component-plans">
         <h2>Plans</h2>
         <strong>My November Plan</strong>
+        {/* todo: Actions for Edit and Delete */}
       </div>
 
       <ul>{generateWorkoutItems()}</ul>
+      <Link to="/workout/create">
+        <button className="btn-add margin-auto uppercase">Add Workout</button>
+      </Link>
     </div>
   );
 }

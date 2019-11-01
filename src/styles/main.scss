@@ -1,4 +1,6 @@
 @import 'theme';
+@import 'mixins';
+@import 'utils';
 @import 'card';
 @import 'dashboard';
 
@@ -9,24 +11,6 @@ html {
 body {
   font-family: $font-stack;
   background-color: #f5f8fb;
-}
-
-.container {
-  box-sizing: border-box;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
-
-  @media (min-width: 1200px) {
-    width: 1164px;
-  }
-  @media (min-width: 1024px) {
-    width: 970px;
-  }
-  @media (min-width: 768px) {
-    width: 744px;
-  }
 }
 
 .header {
@@ -58,14 +42,14 @@ body {
 ul {
   padding: 0;
 }
+a {
+  text-decoration: none;
+}
 
-.content {
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-
-  @media (min-width: 768px) {
-    font-size: 2rem;
-  }
+button {
+  border: 0;
+  background: transparent;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
 }
