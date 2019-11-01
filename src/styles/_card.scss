@@ -10,3 +10,39 @@
   color: #fff;
   background: #bebebe;
 }
+.workout-card {
+  @include respond-to(large) {
+    width: 75%;
+    margin: 1rem auto 0;
+  }
+  &.Monday {
+    background: #235789;
+    &:hover {
+      background: lighten(#235789, 10%);
+    }
+  }
+  &.Tuesday {
+    background: #1d84b5;
+    &:hover {
+      background: lighten(#1d84b5, 10%);
+    }
+  }
+  &.Friday {
+    background: #85cb33;
+    &:hover {
+      background: lighten(#85cb33, 5%);
+    }
+  }
+  &.Saturday {
+    background: #eca400;
+    &:hover {
+      background: lighten(#eca400, 5%);
+    }
+  }
+  .workout-day {
+    font-size: 1rem;
+  }
+  .workout-name {
+    font-size: 1.4rem;
+  }
+}
