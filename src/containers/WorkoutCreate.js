@@ -1,6 +1,10 @@
 import React from 'react';
+import { Form, Input, Select, Button, Tooltip, Icon } from 'antd';
 
-export default function WorkoutCreate() {
+const { Option } = Select;
+
+function WorkoutCreate(props) {
+  const { getFieldDecorator } = props.form;
   const days = [
     'Monday',
     'Tuesday',
@@ -12,22 +16,81 @@ export default function WorkoutCreate() {
   ];
   const generateDayOptionsList = days =>
     days.map((day, index) => (
-      <option value="day" key={index}>
+      <Option value={day} key={index}>
         {day}
-      </option>
+      </Option>
     ));
+  const handleSubmit = e => {
+    e.preventDefault();
+    props.form.validateFieldsAndScroll((err, values) => {
+      if (!err) {
+        console.log('Received values of form: ', values);
+      }
+    });
+  };
+
   return (
     <div id="workout-create">
       <div className="container">
-        <h1>Create Workout:</h1>
-        <label htmlFor="workoutName">Name</label>
-        <input type="text" name="workoutName" />
+        <h1>Create Workout</h1>
 
-        <select name="days" id="select-days">
-          <option value="default">Any</option>
-          {generateDayOptionsList(days)}
-        </select>
+        <Form onSubmit={handleSubmit}>
+          <Form.Item
+            label={
+              <span>
+                Workout name&nbsp;
+                <Tooltip title="What do you want the workout to be called?">
+                  <Icon type="question-circle-o" />
+                </Tooltip>
+              </span>
+            }
+          >
+            {getFieldDecorator('workout_name', {
+              rules: [
+                {
+                  required: true,
+                  message: 'Please input your workout name!',
+                  whitespace: true
+                }
+              ]
+            })(<Input />)}
+          </Form.Item>
+          <Form.Item
+            label={
+              <span>
+                Workout day&nbsp;
+                <Tooltip title="Choose the best day">
+                  <Icon type="question-circle-o" />
+                </Tooltip>
+              </span>
+            }
+          >
+            {getFieldDecorator('day_select', {
+              rules: [
+                {
+                  required: true,
+                  message: 'Please select a day!',
+                  whitespace: true
+                }
+              ]
+            })(
+              <Select className="day-select" placeholder="Select a day">
+                {generateDayOptionsList(days)}
+              </Select>
+            )}
+          </Form.Item>
+
+          <Button
+            type="primary"
+            htmlType="submit"
+            className="login-form-button"
+          >
+            Create
+          </Button>
+        </Form>
       </div>
     </div>
   );
 }
+
+export default Form.create({ name: 'create_workout' })(WorkoutCreate);

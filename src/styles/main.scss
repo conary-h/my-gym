@@ -3,42 +3,17 @@
 @import 'utils';
 @import 'card';
 @import 'dashboard';
+@import '~antd/dist/antd.css';
 
 html {
   font-size: 10px;
 }
 
 body {
-  font-family: $font-stack;
+  font-family: $font-roboto;
   background-color: #f5f8fb;
 }
 
-.header {
-  background-color: #126ab6;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 10rem;
-  position: relative;
-
-  margin-top: 1rem;
-  border-radius: 1rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
-
-  h1 {
-    margin: 0;
-    color: #fff;
-    font: 400 2.4rem $font-stack;
-    position: absolute;
-  }
-
-  img {
-    max-width: 100%;
-    filter: brightness(50%);
-    border-radius: inherit;
-  }
-}
 ul {
   padding: 0;
 }
