@@ -5,6 +5,7 @@ import WorkoutDetail from './containers/WorkoutDetail';
 import Workout from './containers/Workout';
 import ExerciseDetail from './components/ExerciseDetail';
 import WorkoutCreate from './containers/WorkoutCreate';
+import Login from './components/Login';
 
 import './styles/main.scss';
 import 'normalize.css/normalize.css';
@@ -15,6 +16,7 @@ function App() {
       <Dashboard>
         <Router>
           <Workout path="/" />
+          <Login path="/login" />
           <WorkoutDetail path="workouts/:workoutId" />
           <WorkoutCreate path="workout/create" />
           <ExerciseDetail path="categories/:categoryId/exercises/:exerciseId" />
