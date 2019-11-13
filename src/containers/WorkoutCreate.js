@@ -1,9 +1,12 @@
 import React from 'react';
+import ExerciseItemList from '../components/ExerciseItemList';
+import { useSelector } from 'react-redux';
 import { Form, Input, Select, Button, Tooltip, Icon } from 'antd';
 
 const { Option } = Select;
 
 function WorkoutCreate(props) {
+  const exercises = useSelector(state => state.exercises);
   const { getFieldDecorator } = props.form;
   const days = [
     'Monday',
@@ -88,6 +91,7 @@ function WorkoutCreate(props) {
             Create
           </Button>
         </Form>
+        <ExerciseItemList exerciseData={exercises} />
       </div>
     </div>
   );

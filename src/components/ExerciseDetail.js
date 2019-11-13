@@ -1,21 +1,20 @@
-import React, { useEffect, useState } from 'react';
-import data from '../data';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import Header from './Header';
 
 function ExerciseDetail({ exerciseId }) {
-  const [exercise, setExercise] = useState({});
-  console.log(data);
-  useEffect(() => {
-    const currentExercise = data
-      .flatMap(muscle => muscle.exercises)
-      .find(exercise => exercise.id === parseInt(exerciseId));
+  const exercises = useSelector(state => state.exercises);
+  let currentExercise = {};
 
-    setExercise(currentExercise);
-  }, [exerciseId]);
+  if (exercises.length) {
+    currentExercise = exercises.find(
+      exercise => exercise.id === parseInt(exerciseId)
+    );
+  }
 
   return (
     <div className="exercise-detail">
-      <Header title={exercise.name} />
+      <Header title={currentExercise.name} />
       <div className="content">
         <div className="card">
           <div className="rest-circle" />

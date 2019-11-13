@@ -19,7 +19,7 @@ function App() {
           <Login path="/login" />
           <WorkoutDetail path="workouts/:workoutId" />
           <WorkoutCreate path="workout/create" />
-          <ExerciseDetail path="categories/:categoryId/exercises/:exerciseId" />
+          <ExerciseDetail path="exercises/:exerciseId" />
         </Router>
       </Dashboard>
     </div>
