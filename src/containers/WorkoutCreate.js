@@ -83,15 +83,18 @@ function WorkoutCreate(props) {
             )}
           </Form.Item>
 
+          <Form.Item>
+            <h2>Choose exercises for this workout</h2>
+            <ExerciseItemList exerciseData={exercises} isAddItem />
+          </Form.Item>
           <Button
             type="primary"
             htmlType="submit"
-            className="login-form-button"
+            className="login-form-button uppercase"
           >
             Create
           </Button>
         </Form>
-        <ExerciseItemList exerciseData={exercises} />
       </div>
     </div>
   );

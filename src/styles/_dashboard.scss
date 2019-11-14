@@ -1,6 +1,15 @@
 @import './exercise-detail';
 
 #workout-create {
+  #exercise-item-list {
+    max-height: 56rem;
+    overflow: scroll;
+  }
+  .login-form-button {
+    width: 100%;
+    height: 4rem;
+    margin-top: 1rem;
+  }
 }
 .day-select {
   width: 100%;

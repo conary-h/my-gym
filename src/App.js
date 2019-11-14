@@ -12,7 +12,7 @@ import 'normalize.css/normalize.css';
 
 function App() {
   return (
-    <div className="container">
+    <>
       <Dashboard>
         <Router>
           <Workout path="/" />
@@ -22,7 +22,7 @@ function App() {
           <ExerciseDetail path="exercises/:exerciseId" />
         </Router>
       </Dashboard>
-    </div>
+    </>
   );
 }
 

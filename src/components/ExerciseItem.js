@@ -1,17 +1,37 @@
 import React from 'react';
-import { Link } from '@reach/router';
+import PropTypes from 'prop-types';
+import { navigate } from '@reach/router';
+import { Checkbox } from 'antd';
 
 export default function ExerciseItem({
   exerciseId,
   exerciseName,
-  description
+  description,
+  isAddItem
 }) {
+  const goToURI = () => {
+    navigate(`/exercises/${exerciseId}`);
+  };
+  const toggle = () => {};
   return (
-    <Link to={`/exercises/${exerciseId}`}>
-      <div className="card exercise-card">
-        <strong>{exerciseName}</strong>
-        <p>{description}</p>
-      </div>
-    </Link>
+    <div className="card exercise-card">
+      {isAddItem && <Checkbox onChange={toggle()}></Checkbox>}
+      <strong>{exerciseName}</strong>
+      <p>{description}</p>
+    </div>
   );
 }
+
+ExerciseItem.propTypes = {
+  exerciseId: PropTypes.number,
+  exerciseName: PropTypes.string,
+  description: PropTypes.string,
+  isAddItem: PropTypes.bool
+};
+
+ExerciseItem.defaultProps = {
+  exerciseId: '',
+  exerciseName: '',
+  description: '',
+  isAddItem: false
+};
